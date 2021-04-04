@@ -14,7 +14,7 @@ const Food = ({ props }) => {
     const [currentFood, setCurrentFood] = useState(DefaultCurentFood)
 
     useEffect(() => {
-        fetch("http://localhost:8081/foods")
+        fetch("/foods")
             .then((res) => res.json())
             .then((foods) => {
                 setFoods(foods.payload)
